@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -12,25 +13,41 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-
     let errorMessage;
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
     const onSubmit = async (data) => {
-        // await useSignInWithEmailAndPassword(data.email, data.password);
+        await signInWithEmailAndPassword(data.email, data.password);
     };
 
+    // Navigate user
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [user, navigate, from]);
+
+    // Handle Error Message
+    if (error) {
+        errorMessage = <p className='text-red-500 text-center'>{error?.message}</p>
+    }
+
+    // Handle Loading
+    if (loading) {
+        // return <Loading />;
+    }
+
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen bg-base-200">
             <div className="hero-content w-full">
-                <div className="card flex-shrink-0 md:w-2/3 w-full max-w-sm shadow-2xl bg-base-100 border border-secondary">
+                <div className="card flex-shrink-0 md:w-2/3 w-full max-w-md shadow-2xl bg-base-100 border border-secondary">
                     <div className="card-body">
-                        <h1 className='text-3xl text-center mb-5'>Login Now</h1>
+                        <h1 className='text-3xl text-center'>Please Login</h1>
                         {errorMessage}
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <div className="form-control mb-5">
+                            <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
@@ -85,6 +102,7 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
+                        <SocialLogin />
                         <p className='text-center mt-3 text-lg'>Don't have any account? <Link to='/registration' className='text-secondary'>Sign Up</Link></p>
                     </div>
                 </div>
