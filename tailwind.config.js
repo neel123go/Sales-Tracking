@@ -10,9 +10,10 @@ module.exports = {
 
           "primary": "#292524",
           "secondary": "#DC8665",
-          "accent": "#fcccae",
+          "accent": "#fdba74",
           "neutral": "#a8a29e",
           "base-100": "#E8E5EB",
+          "info": "#ede9fe",
           "success": "#55C595",
           "error": "#dc2626",
         },
