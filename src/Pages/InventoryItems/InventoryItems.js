@@ -4,14 +4,13 @@ import UnderlineImg from '../../assets/underline.png';
 
 const InventoryItems = () => {
     return (
-        <div className='px-20 py-10'>
+        <div className='px-20 pb-10'>
             <div className='text-center'>
                 <h1 className='text-4xl text-primary font-bold pt-20 cus-font'>Our Inventory Items</h1>
                 <img className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
             </div>
 
             <div className='mt-16 mb-5 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between gap-5'>
-
                 <div className="bg-base-100 shadow-xl">
                     <figure><img src='https://i.ibb.co/dGhDvXb/ORH91S0.jpg' className="w-[100%]" alt="Shoes" /></figure>
                     <div className="card-body p-8">
