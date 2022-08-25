@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
+import SocialLoader from '../../Shared/SocialLoader/SocialLoader';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -18,7 +19,7 @@ const SocialLogin = () => {
 
     // Handle loading
     if (loading) {
-        // return <SocialLoader />;
+        return <SocialLoader />;
     }
 
     // Handle error

@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -35,7 +36,7 @@ const Register = () => {
 
     // Handle loading
     if (loading || updating) {
-        // return <Loading />;
+        return <Loading />;
     };
 
     return (
