@@ -7,9 +7,9 @@ const Banner = () => {
             <div className="hero-content grid lg:grid-cols-2 grid-cols-1">
                 <div>
                     <img src={BannerImg}
-                        className="w-full mx-auto"
                         data-aos="fade-up"
-                        data-aos-anchor-placement="top-bottom" />
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="800" />
                 </div>
                 <div className='md:ml-16'>
                     <h1 className="text-5xl text-secondary font-bold pt-5 md:pt-2"

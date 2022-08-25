@@ -7,11 +7,14 @@ const CustomerBenefits = () => {
     return (
         <div className='px-20 pb-10'>
             <div className='text-center'>
-                <h1 className='text-4xl text-primary font-bold pt-20 cus-font'>Customer Benefits</h1>
-                <img className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
+                <h1 data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom" data-aos-duration="1000" className='text-4xl text-primary font-bold pt-20 cus-font'>Customer Benefits</h1>
+                <img data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom" data-aos-duration="1000" className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div className="card lg:card-side bg-base-100 shadow-xl w-100 m-10">
+            <div className="card lg:card-side bg-base-100 shadow-xl w-100 m-10" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
                 <div className="card-body w-1/2 grid grid-cols-2">
                     <div className="card w-auto">
                         <div className="card-body">

@@ -4,13 +4,19 @@ import UnderlineImg from '../../assets/underline.png';
 
 const InventoryItems = () => {
     return (
-        <div className='px-20 pb-10'>
+        <div className='px-20 pb-10' id='inventoryItems'>
             <div className='text-center'>
-                <h1 className='text-4xl text-primary font-bold pt-20 cus-font'>Our Inventory Items</h1>
-                <img className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
+                <h1 className='text-4xl text-primary font-bold pt-20 cus-font' data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="1000">Our Inventory Items</h1>
+                <img data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-duration="1000" className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div className='mt-16 mb-5 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between gap-5'>
+            <div data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="1000" className='mt-16 mb-5 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between gap-5'>
                 <div className="bg-base-100 shadow-xl">
                     <figure><img src='https://i.ibb.co/dGhDvXb/ORH91S0.jpg' className="w-[100%]" alt="Shoes" /></figure>
                     <div className="card-body p-8">

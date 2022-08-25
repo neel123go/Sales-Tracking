@@ -20,7 +20,9 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex text-neutral ">
                 <ul className="menu menu-horizontal p-0 text-lg">
-                    <li><Link to='/'>Inventory Items</Link></li>
+                    <li><a href='#inventoryItems'>Inventory Items</a></li>
+                    <li><a href='#ourFeatures'>Our Features</a></li>
+                    <li><a href='#customerReview'>Customer Benefits</a></li>
                     <li><Link to='/'>Contact Us</Link></li>
                     <li><Link to='/'>About Us</Link></li>
                 </ul>
