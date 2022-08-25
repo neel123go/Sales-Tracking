@@ -1,0 +1,16 @@
+.cus-font {
+    font-family: 'Rubik', sans-serif;
+}
+
+.viewMore {
+    color: brown;
+}
+
+.readMore:hover {
+    color: brown;
+}
+
+.readMore:hover .arrow {
+    margin-left: 5px;
+    transition-duration: 0.3s;
+}

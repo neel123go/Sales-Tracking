@@ -6,7 +6,9 @@ const Banner = () => {
         <div className="hero flex justify-center h-full md:py-32 py-5 mt-2 bg-primary">
             <div className="hero-content grid lg:grid-cols-2 grid-cols-1">
                 <div>
-                    <img src={BannerImg} className="w-full mx-auto" data-aos="fade-up"
+                    <img src={BannerImg}
+                        className="w-full mx-auto"
+                        data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom" />
                 </div>
                 <div className='md:ml-16'>
