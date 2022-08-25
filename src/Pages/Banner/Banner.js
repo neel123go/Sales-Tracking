@@ -23,7 +23,7 @@ const Banner = () => {
                         data-aos-anchor-placement="top-bottom"
                         data-aos-duration="800">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus autem ut maiores ea dolor mollitia necessitatibus laboriosam corporis asperiores.</p>
 
-                    <button class="btn btn-outline btn-secondary"
+                    <button className="btn btn-outline btn-secondary"
                         data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom"
                         data-aos-duration="1100">Explore Now</button>

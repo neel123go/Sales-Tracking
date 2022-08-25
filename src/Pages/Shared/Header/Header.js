@@ -37,9 +37,11 @@ const Header = () => {
                             <li className='ml-4 mt-2'>{user.displayName}</li>
                             <li className='ml-4 my-2 cursor-pointer' onClick={handleLogout}>Logout</li>
                         </ul>
-                    </div> : <Link to='/login' className='flex gap-2 border border-primary rounded-lg px-5 py-2 bg-secondary'>
-                        <p className='text-primary text-xl'>Login</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 580 340"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" /></svg></Link>}
+                    </div> : <Link to='/login'>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-secondary">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </Link>}
                 </div>
                 <div className="dropdown dropdown-end">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
