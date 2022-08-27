@@ -20,7 +20,7 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex text-neutral ">
                 {user ? <ul className="menu menu-horizontal p-0 text-lg">
-                    <li><Link to='/'>Manage Items</Link></li>
+                    <li><Link to='/manageInventories'>Manage Items</Link></li>
                     <li><Link to='/'>Add Items</Link></li>
                     <li><Link to='/'>My Items</Link></li>
                     <li><Link to='/'>Contact Us</Link></li>

@@ -6,6 +6,7 @@ import Register from './Pages/LoginRegister/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import ItemDetails from './Pages/ItemDetails/ItemDetails';
 import RequireAuth from './Pages/LoginRegister/RequierAuth/RequireAuth';
+import ManageInventories from './Pages/ManageInventories/ManageInventories';
 
 function App() {
   return (
@@ -19,6 +20,12 @@ function App() {
         <Route path='/itemDetails/:id' element={
           <RequireAuth>
             <ItemDetails />
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/manageInventories' element={
+          <RequireAuth>
+            <ManageInventories />
           </RequireAuth>
         }></Route>
       </Routes>

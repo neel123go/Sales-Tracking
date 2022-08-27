@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ItemDetails = () => {
     const { id } = useParams();
@@ -101,12 +101,12 @@ const ItemDetails = () => {
                 </div>
             </div>
 
-            <div className='flex justify-end cursor-pointer viewMore text-lg mt-10'>
+            <Link to='/manageInventories' className='flex justify-end cursor-pointer viewMore text-lg mt-10'>
                 <p className='inline-block pr-1 font-bold'>Manage Inventories</p>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-7 mt-1 inline-block arrow">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>
-            </div>
+            </Link>
         </div>
     )
 }

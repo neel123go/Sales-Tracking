@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './InventoryItems.css';
 import UnderlineImg from '../../assets/underline.png';
 import InventoryItem from '../../Components/InventoryItem/InventoryItem';
+import { Link } from 'react-router-dom';
 
 const InventoryItems = () => {
     const [inventoryItems, setInventoryItems] = useState('');
@@ -31,12 +32,12 @@ const InventoryItems = () => {
                 }
             </div>
 
-            <div className='flex justify-end cursor-pointer viewMore text-lg'>
+            <Link to='/manageInventories' className='flex justify-end cursor-pointer viewMore text-lg'>
                 <p className='inline-block pr-1 font-bold'>Manage Inventories</p>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-7 mt-1 inline-block arrow">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>
-            </div>
+            </Link>
         </div>
     )
 }
