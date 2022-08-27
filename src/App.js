@@ -8,6 +8,7 @@ import ItemDetails from './Pages/ItemDetails/ItemDetails';
 import RequireAuth from './Pages/LoginRegister/RequierAuth/RequireAuth';
 import ManageInventories from './Pages/ManageInventories/ManageInventories';
 import { Toaster } from 'react-hot-toast';
+import AddItem from './Pages/AddItem/AddItem';
 
 function App() {
   return (
@@ -27,6 +28,12 @@ function App() {
         <Route path='/manageInventories' element={
           <RequireAuth>
             <ManageInventories />
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/addItem' element={
+          <RequireAuth>
+            <AddItem />
           </RequireAuth>
         }></Route>
       </Routes>
