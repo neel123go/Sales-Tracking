@@ -1,0 +1,8 @@
+.readMore:hover {
+    color: brown;
+}
+
+.readMore:hover .arrow {
+    margin-left: 5px;
+    transition-duration: 0.3s;
+}

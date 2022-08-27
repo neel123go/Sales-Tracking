@@ -20,11 +20,11 @@ const CustomerReview = () => {
             <div className='grid grid-cols-4 gap-5 py-10' data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-duration="1000">
-                <div class="bg-base-100 shadow-xl rounded-md">
-                    <div class="card-body">
+                <div className="bg-base-100 shadow-xl rounded-md">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://files.thefacecdn.com/images/_1200x630_crop_center-center_82_none/Ruel034_F2.jpg?mtime=1572895173" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
@@ -38,11 +38,11 @@ const CustomerReview = () => {
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://www.nme.com/wp-content/uploads/2021/12/olivia-rodrigo-2021-696x442.jpg" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
@@ -56,11 +56,11 @@ const CustomerReview = () => {
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://qph.cf2.quoracdn.net/main-qimg-00cad65b33f4e7c6f24d2c42ebf7b40d-lq" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
@@ -75,11 +75,11 @@ const CustomerReview = () => {
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://images.indianexpress.com/2015/06/music-thumb1.jpg" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
@@ -93,11 +93,11 @@ const CustomerReview = () => {
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://media-exp1.licdn.com/dms/image/C4E03AQH16-jNeMT3vQ/profile-displayphoto-shrink_200_200/0/1654511687100?e=2147483647&v=beta&t=wsVmO1A-NkbdawuhkUBCVgiiqOkurFPoesQPCjDQVJM" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
@@ -111,11 +111,11 @@ const CustomerReview = () => {
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/277761327_10216706508214330_6352187030305525314_n.jpg?stp=dst-jpg_p600x600&_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGitSWpMNra69gQBsjJy4A5fCkehVXE61p8KR6FVcTrWkj18u1HJ_OeoAolYs5sGo8vYD5wjd4zdTLUlwX0G10y&_nc_ohc=e91nQiPhr3YAX9C8gvQ&tn=RO8sBiyA2Lwiq0Ob&_nc_ht=scontent.fdac5-1.fna&oh=00_AT_HJFfh9Z6wv_Wru3zBoVRLoIeiavur72hgl38OgX91EQ&oe=630BEF8C" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
@@ -129,11 +129,11 @@ const CustomerReview = () => {
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://pbs.twimg.com/media/FI80guMVkAMv04E.jpg" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
@@ -147,11 +147,11 @@ const CustomerReview = () => {
                     </div>
                 </div>
 
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body">
                         <div className='flex'>
-                            <div class="avatar">
-                                <div class="w-16 rounded">
+                            <div className="avatar">
+                                <div className="w-16 rounded">
                                     <img src="https://static.dw.com/image/52315108_6.jpg" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>

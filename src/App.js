@@ -4,6 +4,8 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/LoginRegister/Login/Login';
 import Register from './Pages/LoginRegister/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
+import ItemDetails from './Pages/ItemDetails/ItemDetails';
+import RequireAuth from './Pages/LoginRegister/RequierAuth/RequireAuth';
 
 function App() {
   return (
@@ -14,6 +16,11 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/registration' element={<Register />} />
+        <Route path='/itemDetails/:id' element={
+          <RequireAuth>
+            <ItemDetails />
+          </RequireAuth>
+        }></Route>
       </Routes>
       <Footer />
     </>
