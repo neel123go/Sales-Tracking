@@ -7,6 +7,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import ItemDetails from './Pages/ItemDetails/ItemDetails';
 import RequireAuth from './Pages/LoginRegister/RequierAuth/RequireAuth';
 import ManageInventories from './Pages/ManageInventories/ManageInventories';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
         }></Route>
       </Routes>
       <Footer />
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
     </>
   );
 }

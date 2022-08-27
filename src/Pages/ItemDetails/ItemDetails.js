@@ -41,7 +41,6 @@ const ItemDetails = () => {
         }
     }
 
-
     // function for restock stock
     const handleRestockItem = (e) => {
         e.preventDefault();
@@ -80,16 +79,16 @@ const ItemDetails = () => {
     return (
         <div className='px-40 my-20'>
             <div className='flex'>
-                <figure className='w-1/2'><img src={item.image} alt="Movie" /></figure>
+                <figure className='w-1/2'><img src={item?.image} alt="Movie" /></figure>
                 <div className='px-10 w-1/2'>
-                    <p>Item Id: {item._id}</p>
-                    <h2 className='text-3xl mt-2 font-bold'>{item.name}</h2>
-                    <p className='mt-7'>{item.description}</p>
-                    <h2 className='text-3xl mt-6'>Price: ${item.price}</h2>
-                    <h2 className='text-xl mt-3'>Supplier Name: {item.suplier}</h2>
-                    <h2 className='text-2xl mt-2'>Stock: {item.stock}</h2>
-                    <h2 className='text-2xl mt-2'>Sold: {item.sold}</h2>
-                    {sold ? <p className='text-error mt-6 text-xl'>This product is sold out</p> : <button onClick={() => handleItemStock(item.stock)} className="bg-secondary px-8 py-1 rounded-md text-xl text-primary mt-6">Delivered</button>}
+                    <p>Item Id: {item?._id}</p>
+                    <h2 className='text-3xl mt-2 font-bold'>{item?.name}</h2>
+                    <p className='mt-7'>{item?.description}</p>
+                    <h2 className='text-3xl mt-6'>Price: ${item?.price}</h2>
+                    <h2 className='text-xl mt-3'>Supplier Name: {item?.suplier}</h2>
+                    <h2 className='text-2xl mt-2'>Stock: {item?.stock}</h2>
+                    <h2 className='text-2xl mt-2'>Sold: {item?.sold}</h2>
+                    {sold ? <p className='text-error mt-6 text-xl'>This product is sold out</p> : <button onClick={() => handleItemStock(item?.stock)} className="bg-secondary px-8 py-1 rounded-md text-xl text-primary mt-6">Delivered</button>}
                     <p className='text-success text-xl mt-2 h-8'>{message}</p>
                     <div>
                         <h2 className='text-xl'>Restock Item</h2>

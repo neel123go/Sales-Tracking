@@ -17,7 +17,7 @@ const InventoryItem = ({ item }) => {
                     <div className="text-xl w-full">Supplier: {item?.suplier}</div>
                     <div className="text-xl">Stock: {item?.stock}</div>
                 </div>
-                <Link to={`/itemDetails/${item._id}`} className='mt-2 cursor-pointer readMore text-lg'>
+                <Link to={`/itemDetails/${item?._id}`} className='mt-2 cursor-pointer readMore text-lg'>
                     <p className='inline-block pr-1 font-bold'>Manage Stock</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 inline-block arrow">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
