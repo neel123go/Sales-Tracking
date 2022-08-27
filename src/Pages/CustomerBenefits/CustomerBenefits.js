@@ -1,6 +1,6 @@
 import React from 'react';
 import UnderlineImg from '../../assets/underline.png';
-import StaffImg from '../../assets/ftfg.png';
+import StaffImg from '../../assets/staffImg.png';
 import './CustomerBenefits.css';
 
 const CustomerBenefits = () => {
