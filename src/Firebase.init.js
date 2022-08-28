@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBNZ_47z9HPzTWkgeoVevfZmABuQ3aFJ_c",
-    authDomain: "sales-tracking-f8904.firebaseapp.com",
-    projectId: "sales-tracking-f8904",
-    storageBucket: "sales-tracking-f8904.appspot.com",
-    messagingSenderId: "1063346607472",
-    appId: "1:1063346607472:web:821f6c63e6567c36162bb5"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
