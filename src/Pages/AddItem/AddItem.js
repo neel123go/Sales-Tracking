@@ -1,11 +1,50 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase.init';
+import toast from 'react-hot-toast';
 
 const AddItem = () => {
     let errorMessage;
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const [user] = useAuthState(auth);
+
     const onSubmit = async (data) => {
-        console.log(data);
+        const name = data?.itemName;
+        const image = data?.image;
+        const price = data?.price;
+        const stock = data?.stock;
+        const sold = data?.sold;
+        const suplier = data?.suplierName;
+        const description = data?.description;
+        const itemInfo = { name, image, description, price, stock, sold, suplier, email: user?.email };
+
+        fetch('http://localhost:5000/addItem', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(itemInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    toast.success('Item added successfully', {
+                        style: {
+                            border: '1px solid #DC8665',
+                            padding: '16px',
+                            color: '#E8E5EB',
+                            backgroundColor: '#292524'
+                        },
+                        iconTheme: {
+                            primary: '#DC8665',
+                            secondary: '#292524',
+                        },
+                    });
+                    reset();
+                }
+            })
+
     };
 
     return (

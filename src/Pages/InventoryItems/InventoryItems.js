@@ -28,7 +28,7 @@ const InventoryItems = () => {
                 data-aos-anchor-placement="top-bottom"
                 data-aos-duration="1000" className='mt-16 mb-5 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between gap-5'>
                 {
-                    inventoryItems ? inventoryItems?.map(item => <InventoryItem key={item._id} item={item}></InventoryItem>) : ''
+                    inventoryItems ? inventoryItems?.slice(0, 8).map(item => <InventoryItem key={item._id} item={item}></InventoryItem>) : ''
                 }
             </div>
 

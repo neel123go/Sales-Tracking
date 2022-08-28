@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 import UnderlineImg from '../../assets/underline.png';
 
 const ManageInventories = () => {
@@ -95,7 +96,7 @@ const ManageInventories = () => {
                 </table>
             </div>
             <div className='w-full flex justify-center'>
-                <button className="bg-secondary px-8 py-1 rounded-md text-xl text-primary mb-16">Add New Items</button>
+                <Link to='/addItem' className="bg-secondary px-8 py-1 rounded-md text-xl text-primary mb-16">Add New Items</Link>
             </div>
         </div>
     )

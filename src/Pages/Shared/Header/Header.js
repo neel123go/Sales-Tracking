@@ -22,7 +22,7 @@ const Header = () => {
                 {user ? <ul className="menu menu-horizontal p-0 text-lg">
                     <li><Link to='/manageInventories'>Manage Items</Link></li>
                     <li><Link to='/addItem'>Add Items</Link></li>
-                    <li><Link to='/'>My Items</Link></li>
+                    <li><Link to='/myItems'>My Items</Link></li>
                     <li><Link to='/'>Contact Us</Link></li>
                     <li><Link to='/'>About Us</Link></li>
                 </ul> : <ul className="menu menu-horizontal p-0 text-lg">
