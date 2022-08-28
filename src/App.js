@@ -11,6 +11,8 @@ import { Toaster } from 'react-hot-toast';
 import AddItem from './Pages/AddItem/AddItem';
 import MyItems from './Pages/MyItems/MyItems';
 import NotFound from './Pages/NotFound/NotFound';
+import ContactUs from './Pages/ContactUs/ContactUs';
+import AboutUs from './Pages/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
           </RequireAuth>
         }></Route>
 
+        <Route path='/contactUs' element={<ContactUs />}></Route>
+        <Route path='/aboutUs' element={<AboutUs />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer />

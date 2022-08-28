@@ -43,19 +43,15 @@ const ManageInventories = () => {
     }
 
     return (
-        <div className='px-20'>
+        <div className='px-20' data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000">
             <div className='text-center'>
-                <h1 className='text-4xl text-primary font-bold pt-16 cus-font' data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="1000">Manage Inventory Items</h1>
-                <img data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="1000" className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
+                <h1 className='text-4xl text-primary font-bold pt-16 cus-font'>Manage Inventory Items</h1>
+                <img className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
-                data-aos-duration="1000" className="border border-secondary rounded-xl w-full my-12">
+            <div className="border border-secondary rounded-xl w-full my-12">
                 <table className="table w-full">
                     <thead>
                         <tr>

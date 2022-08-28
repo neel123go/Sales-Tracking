@@ -23,14 +23,14 @@ const Header = () => {
                     <li><Link to='/manageInventories'>Manage Items</Link></li>
                     <li><Link to='/addItem'>Add Items</Link></li>
                     <li><Link to='/myItems'>My Items</Link></li>
-                    <li><Link to='/'>Contact Us</Link></li>
-                    <li><Link to='/'>About Us</Link></li>
+                    <li><Link to='/contactUs'>Contact Us</Link></li>
+                    <li><Link to='/aboutUs'>About Us</Link></li>
                 </ul> : <ul className="menu menu-horizontal p-0 text-lg">
                     <li><a href='#inventoryItems'>Inventory Items</a></li>
                     <li><a href='#ourFeatures'>Our Features</a></li>
                     <li><a href='#customerReview'>Customer Benefits</a></li>
-                    <li><Link to='/'>Contact Us</Link></li>
-                    <li><Link to='/'>About Us</Link></li>
+                    <li><Link to='/contactUs'>Contact Us</Link></li>
+                    <li><Link to='/aboutUs'>About Us</Link></li>
                 </ul>}
             </div>
             <div className="navbar-end">
@@ -38,11 +38,11 @@ const Header = () => {
                     {user ? <div className='dropdown dropdown-end'>
                         <label tabIndex="0" className="avatar">
                             <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 cursor-pointer">
-                                <img src={(user.photoURL) || 'https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg'} />
+                                <img src={(user?.photoURL) || 'https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg'} />
                             </div>
                         </label>
                         <ul tabIndex="0" className="menu menu-compact dropdown-content mt-9 p-2 shadow bg-primary rounded-box w-52 text-neutral border-2 border-secondary">
-                            <li className='ml-4 mt-2'>{user.displayName}</li>
+                            <li className='ml-4 mt-2'>{user?.displayName}</li>
                             <li className='ml-4 my-2 cursor-pointer' onClick={handleLogout}>Logout</li>
                         </ul>
                     </div> : <Link to='/login'>
@@ -55,11 +55,19 @@ const Header = () => {
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" color='#fcccae' /></svg>
                     </label>
-                    <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52 text-neutral">
-                        <li><Link to='/'>Services</Link></li>
-                        <li><Link to='/'>Our Mission</Link></li>
-                        <li><Link to='/'>Our Successful Student</Link></li>
-                    </ul>
+                    {user ? <ul tabIndex="0" className="menu menu-compact dropdown-content mt-8 border-2 border-secondary p-2 shadow bg-primary rounded-box w-52 text-neutral">
+                        <li><Link to='/manageInventories'>Manage Items</Link></li>
+                        <li><Link to='/addItem'>Add Items</Link></li>
+                        <li><Link to='/myItems'>My Items</Link></li>
+                        <li><Link to='/contactUs'>Contact Us</Link></li>
+                        <li><Link to='/aboutUs'>About Us</Link></li>
+                    </ul> : <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52 text-neutral">
+                        <li><a href='#inventoryItems'>Inventory Items</a></li>
+                        <li><a href='#ourFeatures'>Our Features</a></li>
+                        <li><a href='#customerReview'>Customer Benefits</a></li>
+                        <li><Link to='/contactUs'>Contact Us</Link></li>
+                        <li><Link to='/aboutUs'>About Us</Link></li>
+                    </ul>}
                 </div>
             </div>
         </div>

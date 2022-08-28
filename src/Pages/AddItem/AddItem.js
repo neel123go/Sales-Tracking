@@ -44,12 +44,12 @@ const AddItem = () => {
                     reset();
                 }
             })
-
     };
 
     return (
-        <div className="hero min-h-screen py-20 bg-base-200">
-
+        <div className="hero min-h-screen py-20 bg-base-100" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000">
             <div className="hero-content w-full">
                 <div className="card flex-shrink-0 md:w-2/3 w-100  shadow-2xl bg-base-100 border border-secondary">
                     <div className="card-body">
