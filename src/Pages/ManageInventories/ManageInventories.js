@@ -51,7 +51,7 @@ const ManageInventories = () => {
                 <img className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div className="border border-secondary rounded-xl w-full my-12">
+            <div className="border border-secondary rounded-xl w-full mt-12">
                 <table className="table w-full">
                     <thead>
                         <tr>
@@ -91,9 +91,13 @@ const ManageInventories = () => {
                     </tbody>
                 </table>
             </div>
-            <div className='w-full flex justify-center'>
-                <Link to='/addItem' className="bg-secondary px-8 py-1 rounded-md text-xl text-primary mb-16">Add New Items</Link>
-            </div>
+
+            <Link to='/addItem' className='flex justify-end cursor-pointer viewMore text-lg mt-8 mb-16'>
+                <p className='inline-block pr-1 font-bold'>Add New Items</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-7 mt-1 inline-block arrow">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </Link>
         </div>
     )
 }

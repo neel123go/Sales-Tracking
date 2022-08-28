@@ -21,7 +21,7 @@ const Banner = () => {
                     <p className="py-10 text-neutral"
                         data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom"
-                        data-aos-duration="800">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus autem ut maiores ea dolor mollitia necessitatibus laboriosam corporis asperiores.</p>
+                        data-aos-duration="800">At Sales Tracking Warehouse, we provide a unique solution for warehousing space for business and consumers. We deliver our product around the world without any cost.</p>
 
                     <button className="btn btn-outline btn-secondary"
                         data-aos="fade-up"
