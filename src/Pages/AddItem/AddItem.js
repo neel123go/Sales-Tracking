@@ -47,17 +47,17 @@ const AddItem = () => {
     };
 
     return (
-        <div className="hero min-h-screen py-20 bg-base-100" data-aos="fade-up"
+        <div className="hero min-h-screen md:py-20 py-6 bg-base-100" data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="1000">
             <div className="hero-content w-full">
-                <div className="card flex-shrink-0 md:w-2/3 w-100  shadow-2xl bg-base-100 border border-secondary">
+                <div className="card flex-shrink-0 md:w-2/3 sm:w-3/4 w-full shadow-2xl bg-base-100 border border-secondary">
                     <div className="card-body">
                         <h1 className='text-3xl text-center mb-5'>Add Item</h1>
                         {errorMessage}
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <div className="flex justify-between">
-                                <div className='w-1/2 mr-5'>
+                            <div className="grid md:grid-cols-2 grid-cols-1">
+                                <div className='w-full mr-5'>
                                     <div className="form-control w-full">
                                         <label className="label">
                                             <span className="label-text">Item Name</span>
@@ -126,7 +126,7 @@ const AddItem = () => {
                                 </div>
 
 
-                                <div className='w-1/2 ml-5'>
+                                <div className='w-full md:ml-5 ml-0'>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Item Stock</span>

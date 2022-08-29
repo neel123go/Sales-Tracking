@@ -52,7 +52,7 @@ const MyItems = () => {
     }
 
     return (
-        <div className='px-20 mb-20' data-aos="fade-up"
+        <div className='md:px-20 sm:px-12 px-5 mb-20' data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="1000">
             <div className='text-center'>
@@ -61,14 +61,14 @@ const MyItems = () => {
             </div>
 
             {
-                items?.length > 0 ? <div className="border border-secondary rounded-xl w-full my-12">
+                items?.length > 0 ? <div className="border border-secondary rounded-xl mt-12 w-full">
                     <table className="table w-full">
                         <thead>
                             <tr>
                                 <th>Item</th>
                                 <th>Price</th>
                                 <th>Stock</th>
-                                <th>Sold</th>
+                                <th className='md:block hidden'>Sold</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -76,25 +76,29 @@ const MyItems = () => {
                             {
                                 items ? items?.map(item => <tr key={item?._id}>
                                     <td>
-                                        <div className="flex items-center space-x-5">
+                                        <div className="flex items-center sm:space-x-5 space-x-0">
                                             <div className="avatar">
-                                                <div className="mask mask-squircle w-12 h-12">
+                                                <div className="mask mask-squircle md:w-12 md:h-12 w-10 h-10">
                                                     <img src={item?.image} alt="Avatar Tailwind CSS Component" />
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="font-bold">{item?.name}</div>
-                                                <div className="text-sm opacity-50">ID: {item?._id}</div>
+                                                <div className="font-bold sm:table-cell hidden">{item?.name}</div>
+                                                <div className="text-sm opacity-50 sm:inline-block hidden">ID: {item?._id}</div>
                                             </div>
                                         </div>
                                     </td>
                                     <td>${item?.price}</td>
                                     <td>{item?.stock}</td>
-                                    <td>{item?.sold}</td>
+                                    <td className='md:table-cell hidden'>{item?.sold}</td>
                                     <th>
-                                        <button onClick={() => handleItemDelete(item?._id)} className="btn btn-error btn-sm">Delete</button>
+                                        <button onClick={() => handleItemDelete(item?._id)} className="btn btn-error btn-sm lg:table-cell hidden">Delete</button>
+                                        <svg onClick={() => handleItemDelete(item?._id)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="lg:hidden table-cell p-0 m-0 w-6 h-6 text-error">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+
                                     </th>
-                                </tr>) : ''
+                                </tr>) : 'No Data Found'
                             }
                         </tbody>
                     </table>
