@@ -6,17 +6,17 @@ import Feature3 from '../../assets/ocean-freight-img.jpg';
 
 const OurFeatures = () => {
     return (
-        <div className='bg-primary px-20' id="ourFeatures">
+        <div className='bg-primary md:px-20 sm:px-12 px-5' id="ourFeatures">
             <div className='text-center'>
                 <h1 data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="1000" className='text-4xl text-base-100 font-bold pt-20 cus-font'>Our Features</h1>
+                    data-aos-duration="1000" className='md:text-4xl text-3xl text-base-100 font-bold md:pt-20 pt-10 cus-font'>Our Features</h1>
                 <img data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
                     data-aos-duration="1000" className='w-40  mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div className='mt-16 pb-20 grid grid-cols-3 justify-between w-5/6 gap-8 mx-auto' data-aos="fade-up"
+            <div className='md:mt-16 mt-8 pb-20 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between lg:w-5/6 w-full gap-8 mx-auto' data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-duration="1000">
                 <div className="bg-base-100 shadow-xl">

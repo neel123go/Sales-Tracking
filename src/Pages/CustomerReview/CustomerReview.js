@@ -4,20 +4,20 @@ import UnderlineImg from '../../assets/underline.png';
 
 const CustomerReview = () => {
     return (
-        <div className='bg-primary px-20 pb-10' id='customerReview'>
+        <div className='bg-primary md:px-20 sm:px-12 px-5 md:pb-10 pb-0' id='customerReview'>
             <div className='text-center'>
                 <h1 data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="1000" className='text-4xl text-base-100 font-bold pt-20 cus-font'>What People Say</h1>
+                    data-aos-duration="1000" className='md:text-4xl text-3xl text-base-100 font-bold md:pt-20 pt-10 cus-font'>What People Say</h1>
                 <h1 data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="1000" className='text-4xl text-base-100 font-bold pt-3 cus-font'>About Us</h1>
+                    data-aos-duration="1000" className='md:text-4xl text-3xl text-base-100 font-bold pt-3 cus-font'>About Us</h1>
                 <img data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="1000" className='w-56  mx-auto' src={UnderlineImg} alt="" />
+                    data-aos-duration="1000" className='xl:w-1/6 md:w-2/6 sm:w-3/6 w-2/3 mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div className='grid grid-cols-4 gap-5 py-10' data-aos="fade-up"
+            <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 py-10' data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-duration="1000">
                 <div className="bg-base-100 shadow-xl rounded-md">

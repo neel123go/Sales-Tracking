@@ -5,17 +5,17 @@ import './CustomerBenefits.css';
 
 const CustomerBenefits = () => {
     return (
-        <div className='px-20 pb-10'>
+        <div className='md:px-12 sm:px-12 px-5 pb-10'>
             <div className='text-center'>
                 <h1 data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom" data-aos-duration="1000" className='text-4xl text-primary font-bold pt-20 cus-font'>Customer Benefits</h1>
+                    data-aos-anchor-placement="top-bottom" data-aos-duration="1000" className='md:text-4xl text-3xl text-primary font-bold md:pt-20 pt-10 cus-font'>Customer Benefits</h1>
                 <img data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom" data-aos-duration="1000" className='w-1/6  mx-auto' src={UnderlineImg} alt="" />
+                    data-aos-anchor-placement="top-bottom" data-aos-duration="1000" className='xl:w-1/6 md:w-2/6 sm:w-3/6 w-2/3 mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div className="card lg:card-side bg-base-100 shadow-xl w-100 m-10" data-aos="fade-up"
+            <div className="mt-10 card grid xl:grid-cols-2 grid-cols-1 bg-base-100 shadow-xl md:m-10 m-0" data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-                <div className="card-body w-1/2 grid grid-cols-2">
+                <div className="card-body w-full grid md:grid-cols-2 lg:p-5 p-0 grid-cols-1 md:order-1 order-2">
                     <div className="card w-auto">
                         <div className="card-body">
                             <div className='p-2 bg-secondary w-10 icon'>
@@ -70,7 +70,7 @@ const CustomerBenefits = () => {
                         </div>
                     </div>
                 </div>
-                <figure className='w-1/2'>
+                <figure className=' w-full md:order-2 order-1'>
                     <img className='w-full h-full' src={StaffImg} alt="Album" />
                 </figure>
             </div>

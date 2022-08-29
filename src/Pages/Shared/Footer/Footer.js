@@ -4,10 +4,10 @@ import UnderlineImg from '../../../assets/underline.png';
 
 const Footer = () => {
     return (
-        <div className='px-20 border-t border-primary'>
+        <div className='md:px-20 px-2 border-t border-primary'>
             <footer className="footer footer-center p-10 bg-base-100  rounded">
                 <div className='text-center'>
-                    <h1 className='text-4xl text-primary font-bold'>Sales Tracking</h1>
+                    <h1 className='md:text-4xl text-3xl text-primary font-bold'>Sales Tracking</h1>
                     <img className='w-1/3 mx-auto' src={UnderlineImg} alt="" />
                 </div>
                 <div>
@@ -17,7 +17,7 @@ const Footer = () => {
                         <Link to=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></Link>
                     </div>
                 </div>
-                <div className="grid grid-flow-col gap-4 mt-[-20px]">
+                <div className="grid md:grid-flow-col gap-4 mt-[-20px]">
                     <Link to='/' className="link link-hover">About us</Link>
                     <Link to='/' className="link link-hover">Contact</Link>
                     <Link to='/' className="link link-hover">Career</Link>
