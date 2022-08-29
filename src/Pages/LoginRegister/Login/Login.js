@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../Shared/Loading/Loading';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -14,6 +15,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     let errorMessage;
     const navigate = useNavigate();
     const location = useLocation();
@@ -40,6 +42,25 @@ const Login = () => {
         return <Loading />;
     }
 
+    // function for reset password
+    const handleResetPassword = async () => {
+        const email = document.getElementById("email").value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast.success('Email sent. Check your email.', {
+                style: {
+                    marginTop: '-3px'
+                }
+            });
+        } else {
+            toast.error('Please enter your email', {
+                style: {
+                    marginTop: '-3px'
+                }
+            });
+        }
+    }
+
     return (
         <div className="hero md:min-h-screen bg-base-200">
             <div className="hero-content w-full">
@@ -56,6 +77,7 @@ const Login = () => {
                                 <input
                                     type="text"
                                     placeholder="Email address"
+                                    id="email"
                                     {...register("email", {
                                         required: {
                                             value: true,
@@ -95,6 +117,8 @@ const Login = () => {
                                     autoComplete='off'
                                     className="input input-bordered" />
                                 <label className="mt-1">
+                                    <p className='text-md text-error cursor-pointer' onClick={handleResetPassword}
+                                    >Forgot Password?</p>
                                     {errors.password?.type === 'required' && <span className="label-text-alt text-error" style={{ fontSize: '15px' }}>{errors.password.message}</span>}
                                     {errors.password?.type === 'minLength' && <span className="label-text-alt text-error" style={{ fontSize: '15px' }}>{errors.password.message}</span>}
                                 </label>
