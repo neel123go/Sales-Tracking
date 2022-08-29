@@ -4,25 +4,27 @@ import AboutImg from '../../assets/about.png';
 
 const AboutUs = () => {
     return (
-        <div className='px-20' data-aos="fade-up"
+        <div className='md:px-20 sm:px-12 px-5' data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="1000">
             <div className='text-center mb-10'>
-                <h1 className='text-4xl text-primary font-bold pt-16 cus-font'>About Us</h1>
-                <img className='w-1/6 px-16  mx-auto' src={UnderlineImg} alt="" />
+                <h1 className='text-4xl text-primary font-bold md:pt-16 pt-10 cus-font'>About Us</h1>
+                <img className='xl:w-1/6 md:w-2/6 sm:w-3/6 w-2/3 mx-auto' src={UnderlineImg} alt="" />
             </div>
 
-            <div className='flex my-20'>
-                <figure className='w-1/2'><img src={AboutImg} alt="Movie" /></figure>
-                <div className='px-10 w-1/2'>
-                    <p className='text-primary text-3xl mt-2 h-8'>At <span className='text-secondary font-bold'>Sales Tracking Warehouse</span>, we provide a unique solution for warehousing space for business and consumers</p>
-                    <span className='w-40 h-2 bg-secondary block mt-24'></span>
+            <div className='grid grid-cols-1 lg:gap-0 gap-5 lg:grid-cols-2 md:my-20 my-10'>
+                <figure className='w-full'><img src={AboutImg} alt="Movie" /></figure>
+                <div className='md:px-10 px-0 w-full'>
+                    <p className='text-primary inline-block md:text-3xl text-2xl mt-2 h-8'>At <span className='text-secondary font-bold'>Sales Tracking Warehouse</span>, we provide a unique solution for warehousing space for business and consumers</p>
+                    <div className='mt-5'>
+                        <span className='w-40 h-2 bg-secondary block'></span>
+                    </div>
                     <p className='mt-16'>From 2005, we start our journey with only 200 customer & 10 employee. But now we have more than 2+ Million customer & 5000+ employee. Hopefully it will continue to grow day by day. We are working in the hope that maybe one day Sales Tracking Warehouse will become the largest warehouse in the world. We are working for you with our best.</p>
                     <p className='mt-8'>We want every customer to get the best service from us. For do this we try our best. We store items in our warehouse. We keep the product in our warehouse in such a way that there is no damage to the product. For this we use many technics. Also we communicate with our customers through one-to-one meeting session. So believe us & join with us soon.</p>
                 </div>
             </div>
 
-            <div className='grid grid-cols-3 gap-32 px-40 mb-20' data-aos="fade-up"
+            <div className='grid md:grid-cols-3 grid-cols-1 md:gap-32 gap-5 lg:px-40 px-0 mb-20' data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
                 data-aos-duration="1000">
                 <div class="card-body items-center text-center">

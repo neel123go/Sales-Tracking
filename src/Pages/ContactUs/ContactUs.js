@@ -45,18 +45,18 @@ const ContactUs = () => {
         <div data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="1000">
-            <div className='text-center mb-10'>
-                <h1 className='text-4xl text-primary font-bold pt-16 cus-font'>Contact Us</h1>
-                <img className='w-1/6 px-16  mx-auto' src={UnderlineImg} alt="" />
-                <h1 className='text-center text-2xl mt-5'>We'd love to here from you</h1>
-                <p className='mt-2 w-2/5 mx-auto'>Whether you have a question about features, trails, pricing, or anything else, our teat is ready to answer all your questions</p>
+            <div className='text-center md:mb-10 mb-6'>
+                <h1 className='md:text-4xl text-3xl text-primary font-bold pt-16 cus-font'>Contact Us</h1>
+                <img className='xl:w-1/6 md:w-2/6 sm:w-3/6 w-2/3 px-5 mx-auto' src={UnderlineImg} alt="" />
+                <h1 className='text-center md:text-2xl text-xl md:mt-5 mt-2'>We'd love to here from you</h1>
+                <p className='mt-2 lg:w-2/5 md:w-3/5 w-4/5 mx-auto'>Whether you have a question about features, trails, pricing, or anything else, our teat is ready to answer all your questions</p>
             </div>
 
-            <div className="hero mb-20 bg-base-100">
+            <div className="hero md:mb-20 mb-10 bg-base-100">
                 <div className="hero-content w-full">
-                    <div className="card flex-shrink-0 md:w-2/4 w-100 max-w-2/3 shadow-2xl bg-base-100 border border-secondary">
+                    <div className="card flex-shrink-0 md:w-2/4 w-full  shadow-2xl bg-base-100 border border-secondary">
                         <div className="card-body">
-                            <h1 className='text-3xl text-center mb-8'>Get in touch with us</h1>
+                            <h1 className='md:text-3xl text-2xl text-center mb-8'>Get in touch with us</h1>
                             {errorMessage}
                             <form onSubmit={handleSubmit(onSubmit)}>
 
