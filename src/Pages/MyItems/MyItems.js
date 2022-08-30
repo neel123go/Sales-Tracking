@@ -3,6 +3,7 @@ import { toast } from 'react-hot-toast';
 import UnderlineImg from '../../assets/underline.png';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase.init';
+import { signOut } from 'firebase/auth';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
@@ -13,12 +14,19 @@ const MyItems = () => {
         fetch(url, {
             method: 'GET',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify()
         })
-            .then(res => res.json())
-            .then(data => setItems(data));
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    signOut(auth);
+                    localStorage.removeItem('accessToken');
+                }
+                return res.json()
+            })
+            .then(data => setItems(data))
     }, [user]);
 
     // Function for delete item
@@ -27,7 +35,7 @@ const MyItems = () => {
         if (deleteStatus) {
             const url = `http://localhost:5000/items/${itemId}`;
             fetch(url, {
-                method: 'DELETE'
+                method: 'DELETE',
             })
                 .then(res => res.json())
                 .then(data => {

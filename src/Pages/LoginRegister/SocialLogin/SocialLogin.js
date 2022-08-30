@@ -13,7 +13,19 @@ const SocialLogin = () => {
 
     useEffect(() => {
         if (user) {
-            navigate(from, { replace: true });
+            const email = user.user.email;
+            fetch('http://localhost:5000/login', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({ email })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    localStorage.setItem('accessToken', data.accessToken);
+                    navigate(from, { replace: true });
+                });
         }
     }, [user, navigate, from]);
 

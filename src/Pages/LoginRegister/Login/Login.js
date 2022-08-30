@@ -22,15 +22,28 @@ const Login = () => {
     const from = location.state?.from?.pathname || "/";
 
     const onSubmit = async (data) => {
-        await signInWithEmailAndPassword(data.email, data.password);
+        const email = data?.email
+        await signInWithEmailAndPassword(email, data.password);
+        fetch('http://localhost:5000/login', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        })
+            .then(res => res.json())
+            .then(data => {
+                localStorage.setItem('accessToken', data.accessToken);
+                navigate(from, { replace: true });
+            });
     };
 
-    // Navigate user
-    useEffect(() => {
-        if (user) {
-            navigate(from, { replace: true });
-        }
-    }, [user, navigate, from]);
+    // // Navigate user
+    // useEffect(() => {
+    //     if (user) {
+    //         navigate(from, { replace: true });
+    //     }
+    // }, [user, navigate, from]);
 
     // Handle Error Message
     if (error) {
