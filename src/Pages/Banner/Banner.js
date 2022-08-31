@@ -23,10 +23,10 @@ const Banner = () => {
                         data-aos-anchor-placement="top-bottom"
                         data-aos-duration="800">At Sales Tracking Warehouse, we provide a unique solution for warehousing space for business and consumers. We deliver our product around the world without any cost.</p>
 
-                    <button className="btn btn-outline btn-secondary"
+                    <a href='#inventoryItems' className="btn btn-outline btn-secondary"
                         data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom"
-                        data-aos-duration="1100">Explore Now</button>
+                        data-aos-duration="1100">Explore Now</a>
                 </div>
             </div>
         </div>

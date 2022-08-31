@@ -116,7 +116,7 @@ const CustomerReview = () => {
                         <div className='flex'>
                             <div className="avatar">
                                 <div className="w-16 rounded">
-                                    <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/277761327_10216706508214330_6352187030305525314_n.jpg?stp=dst-jpg_p600x600&_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGitSWpMNra69gQBsjJy4A5fCkehVXE61p8KR6FVcTrWkj18u1HJ_OeoAolYs5sGo8vYD5wjd4zdTLUlwX0G10y&_nc_ohc=e91nQiPhr3YAX9C8gvQ&tn=RO8sBiyA2Lwiq0Ob&_nc_ht=scontent.fdac5-1.fna&oh=00_AT_HJFfh9Z6wv_Wru3zBoVRLoIeiavur72hgl38OgX91EQ&oe=630BEF8C" alt="Tailwind-CSS-Avatar-component" />
+                                    <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-6/301793288_10217208690568575_5656699412204268463_n.jpg?stp=dst-jpg_p600x600&_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGN9hTIwNpCcQn45nDbrR46LBCZf3agYdIsEJl_dqBh0uwWKZc0dAhSxykyk-VZ_AXg2rEZ-ilwfcMmjkA48CfU&_nc_ohc=BmU80ZVlB1sAX8VkZsI&_nc_ht=scontent.fdac5-2.fna&oh=00_AT869BNlpFu7wKxTgwP9-7WLG4oqIXsfqemEhcp42OZd5w&oe=6313DE75" alt="Tailwind-CSS-Avatar-component" />
                                 </div>
                             </div>
                             <div className='ml-3 mt-2'>
