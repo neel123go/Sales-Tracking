@@ -8,7 +8,7 @@ const ItemDetails = () => {
     const [sold, setSold] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/items/${id}`)
+        fetch(`https://stormy-tundra-05889.herokuapp.com/items/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [item, id]);
@@ -24,7 +24,7 @@ const ItemDetails = () => {
             // setMessage('')
             const updateItem = { newQuantity: newStock };
 
-            const url = `http://localhost:5000/items/${id}`;
+            const url = `https://stormy-tundra-05889.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -58,7 +58,7 @@ const ItemDetails = () => {
             const newStock = parseInt(restock) + parseInt(stock);
             const updateItem = { newQuantity: newStock };
 
-            const url = `http://localhost:5000/items/${id}`;
+            const url = `https://stormy-tundra-05889.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

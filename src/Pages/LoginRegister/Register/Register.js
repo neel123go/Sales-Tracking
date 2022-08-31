@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
@@ -21,7 +21,7 @@ const Register = () => {
         const email = data?.email;
         await createUserWithEmailAndPassword(email, data?.password);
         await updateProfile({ displayName: data?.userName });
-        fetch('http://localhost:5000/login', {
+        fetch('https://stormy-tundra-05889.herokuapp.com/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

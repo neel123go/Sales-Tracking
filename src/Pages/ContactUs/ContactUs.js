@@ -14,7 +14,7 @@ const ContactUs = () => {
         const message = data?.message;
         const messageInfo = { name, number, email, message };
 
-        fetch('http://localhost:5000/queries', {
+        fetch('https://stormy-tundra-05889.herokuapp.com/queries', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

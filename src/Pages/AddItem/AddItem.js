@@ -19,7 +19,7 @@ const AddItem = () => {
         const description = data?.description;
         const itemInfo = { name, image, description, price, stock, sold, suplier, email: user?.email };
 
-        fetch('http://localhost:5000/addItem', {
+        fetch('https://stormy-tundra-05889.herokuapp.com/addItem', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

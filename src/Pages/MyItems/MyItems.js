@@ -10,7 +10,7 @@ const MyItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/myItems?email=${user.email}`
+        const url = `https://stormy-tundra-05889.herokuapp.com/myItems?email=${user.email}`
         fetch(url, {
             method: 'GET',
             headers: {
@@ -33,7 +33,7 @@ const MyItems = () => {
     const handleItemDelete = (itemId) => {
         const deleteStatus = window.confirm('Are you sure to delete this item?');
         if (deleteStatus) {
-            const url = `http://localhost:5000/items/${itemId}`;
+            const url = `https://stormy-tundra-05889.herokuapp.com/items/${itemId}`;
             fetch(url, {
                 method: 'DELETE',
             })

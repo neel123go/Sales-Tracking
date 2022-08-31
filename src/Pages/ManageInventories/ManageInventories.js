@@ -7,7 +7,7 @@ const ManageInventories = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://stormy-tundra-05889.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data));
     }, []);
@@ -16,7 +16,7 @@ const ManageInventories = () => {
     const handleItemDelete = (itemId) => {
         const deleteStatus = window.confirm('Are you sure to delete this item?');
         if (deleteStatus) {
-            const url = `http://localhost:5000/items/${itemId}`;
+            const url = `https://stormy-tundra-05889.herokuapp.com/items/${itemId}`;
             fetch(url, {
                 method: 'DELETE'
             })

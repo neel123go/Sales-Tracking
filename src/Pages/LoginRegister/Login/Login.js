@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
@@ -11,7 +11,6 @@ const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
         signInWithEmailAndPassword,
-        user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
@@ -24,7 +23,7 @@ const Login = () => {
     const onSubmit = async (data) => {
         const email = data?.email
         await signInWithEmailAndPassword(email, data.password);
-        fetch('http://localhost:5000/login', {
+        fetch('https://stormy-tundra-05889.herokuapp.com/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
